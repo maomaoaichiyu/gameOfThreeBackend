@@ -1,0 +1,22 @@
+{
+  "name": "game-of-three-backend",
+  "version": "0.0.1",
+  "private": true,
+  "description": "game of three backend",
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-strongloop": "^2.1.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "lint": "eslint --ignore-path .gitignore .",
+    "autofix": "eslint --ignore-path .gitignore --fix ."
+  }
+}
