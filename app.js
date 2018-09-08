@@ -1,13 +1,7 @@
 'use strict';
 
-let express = require('express');
-
-let app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
-
-
 let port = process.env.PORT || 10050;
+let io = require('socket.io').listen(port);
 
 let numberOfPlayers = 0;
 
@@ -44,8 +38,4 @@ io.on('connection', function(socket){
     }
   });
 
-});
-
-http.listen(port, function(){
-  console.log(`server running on http://localhost:${port}`);
 });
