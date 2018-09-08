@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/maomaoaichiyu/gameOfThreeBackend.svg?branch=master)](https://travis-ci.org/maomaoaichiyu/gameOfThreeBackend)
+
 # GameOfThree backend
 
 This repository contains a simple Node.js application.
