@@ -14,3 +14,6 @@ npm ci
 npm start
 ```
 
+## Server
+
+The server is hosted here: [https://game-of-3-backend.herokuapp.com/](https://game-of-3-backend.herokuapp.com/)
