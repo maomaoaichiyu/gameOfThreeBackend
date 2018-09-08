@@ -13,14 +13,13 @@ let numberOfPlayers = 0;
 
 io.on('connection', function(socket){
 
-  numberOfPlayers += 1;
-  if (numberOfPlayers > 2) {
+  if ((numberOfPlayers + 1) > 2) {
     socket.disconnect(true);
-    numberOfPlayers -= 1;
     console.log(`User ${socket.id} refused`);
     return;
   }
 
+  numberOfPlayers += 1;
   console.log(`User ${socket.id} connected`);
   socket.on('disconnect', function(){
     numberOfPlayers -= 1;
