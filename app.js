@@ -26,7 +26,12 @@ io.on('connection', function(socket){
     console.log(`User ${socket.id} disconnected`);
   });
   if (numberOfPlayers === 2) {
-    socket.emit('start');
+    io.clients((error, clients) => {
+      if (error) throw error;
+      let startingPlayerId = clients[Math.round(Math.random())];
+      console.log(`User ${startingPlayerId} starts.`);
+      io.to(startingPlayerId).emit('start');
+    });
   }
 
   socket.on('number', function(number) {
