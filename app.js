@@ -39,3 +39,7 @@ io.on('connection', function(socket){
   });
 
 });
+
+module.exports.stop = () => {
+  io.close();
+};

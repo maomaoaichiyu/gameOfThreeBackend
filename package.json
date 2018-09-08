@@ -12,11 +12,14 @@
   },
   "devDependencies": {
     "eslint": "^5.5.0",
-    "eslint-config-strongloop": "^2.1.0"
+    "eslint-config-strongloop": "^2.1.0",
+    "mocha": "^5.2.0",
+    "socket.io-client": "^2.1.1"
   },
   "scripts": {
     "start": "node app.js",
     "lint": "eslint --ignore-path .gitignore .",
-    "autofix": "eslint --ignore-path .gitignore --fix ."
+    "autofix": "eslint --ignore-path .gitignore --fix .",
+    "test": "mocha \"test/**/*.js\""
   }
 }
