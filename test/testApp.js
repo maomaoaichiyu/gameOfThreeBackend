@@ -61,6 +61,23 @@ describe('Game Server', function() {
 
   });
 
+  it('Should notify the 3rd player that he is kicked out', function(done) {
+
+    client1 = io.connect(socketURL, options);
+    client1.on('connect', function(data){
+
+      client2 = io.connect(socketURL, options);
+      client2.on('connect', function(data){
+
+        client3 = io.connect(socketURL, options);
+        client3.on('kickout', function() {
+          done();
+        });
+      });
+    });
+
+  });
+
   it('Should tell one player to start.', function(done) {
 
     client1 = io.connect(socketURL, options);

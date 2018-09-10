@@ -8,6 +8,7 @@ let numberOfPlayers = 0;
 io.on('connection', function(socket){
 
   if ((numberOfPlayers + 1) > 2) {
+    socket.emit('kickout');
     socket.disconnect(true);
     console.log(`User ${socket.id} refused`);
     return;
